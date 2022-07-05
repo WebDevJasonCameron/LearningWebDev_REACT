@@ -21,6 +21,7 @@ const Expenses = (props) => {
 				/>
 				{props.items.map((expense) => (
 					<ExpenseItem
+						key={expense.id} // Use this key to keep bugs from happening!
 						title={expense.title}
 						amount={expense.amount}
 						date={expense.date}
