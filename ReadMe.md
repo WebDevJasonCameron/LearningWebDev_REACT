@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+## 2022 09 17 | Back with YT Lessons
+
+I'm doing a "quick" lesson with a YouTuber called Lama Dev. Tutorial... Lets do this!
+
 ## 2022 06 30 | State
 
 Best thing I learned today was how useState works within your application. The instructor is very helpful in explaining why running an onclick command does not actually redraw the DOM. The site is drawn by REACT moving through the components once and then twice. However, once the site is completed, there isn't anything (in the beginning) that forces the site to redraw existing components. This is where useState comes into play. Even more interestingly, this function is a hook that first needs to be imported into your page. Then, it needs to called within your component (Function). It provides you an array of two elements. The existing state, and the state you will change too.
