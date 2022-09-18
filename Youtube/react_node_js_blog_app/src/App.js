@@ -4,7 +4,7 @@ function App() {
 	return (
 		<div>
 			<TopBar />
-			<p>Test</p>
+			<p></p>
 		</div>
 	);
 }
