@@ -48,3 +48,8 @@
   font-weight: 300;
   cursor: pointer;
 }
+
+.searchIcon{
+  font-size: 18px;
+  color: #666;
+}

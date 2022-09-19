@@ -1,8 +1,14 @@
 # REACT Initial Training
 
+Completing small stuff for the topbar. I have some much more to do.
+
+---
+
 ## 2022 09 17 | Back with YT Lessons
 
 I'm doing a "quick" lesson with a YouTuber called Lama Dev. Tutorial... Lets do this!
+
+---
 
 ## 2022 06 30 | State
 
