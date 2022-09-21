@@ -1,5 +1,7 @@
 # REACT Initial Training
 
+# 2022 09 19 | Continuing
+
 Completing small stuff for the topbar. I have some much more to do.
 
 ---
