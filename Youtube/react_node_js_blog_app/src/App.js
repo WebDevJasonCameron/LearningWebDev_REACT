@@ -10,16 +10,19 @@ import Write from "./pages/write/Write";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
+	// VARs
+	const user = true;
+
+	// Act
 	return (
 		<BrowserRouter>
 			<TopBar />
 			<Routes>
-				<Route path="/" element={<App />} />
-				<Route index element={<Home />} />
-				<Route path="/register" element={<Register />} />
-				<Route path="/settings" element={<Settings />} />
-				<Route path="/login" element={<Login />} />
-				<Route path="/write" element={<Write />} />
+				<Route path="/" element={<Home />} />
+				<Route path="/register" element={user ? <Home /> : <Register />} />
+				<Route path="/login" element={user ? <Home /> : <Login />} />
+				<Route path="/write" element={user ? <Write /> : <Login />} />
+				<Route path="/settings" element={user ? <Settings /> : <Login />} />
 				<Route path="/post/:postId" element={<Single />} />
 			</Routes>
 		</BrowserRouter>
