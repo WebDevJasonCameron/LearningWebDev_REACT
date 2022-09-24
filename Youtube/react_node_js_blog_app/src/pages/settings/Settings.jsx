@@ -14,7 +14,7 @@ export default function Settings() {
           <div className="settingsProfilePicture">
             <img 
               className="settingsProfileImg"
-              src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2662&q=80" 
+              src="https://images.unsplash.com/photo-1526991902737-3cd476541629?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" 
               alt="" />
             <label htmlFor="fileInput">
               <i class="settingsProfileIcon fa-regular fa-circle-user"></i>
