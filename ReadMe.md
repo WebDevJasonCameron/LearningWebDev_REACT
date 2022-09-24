@@ -1,5 +1,11 @@
 # REACT Initial Training
 
+# 2022 09 24 | Resource
+
+Check out reactrouter.com for helpful code. One thing that seems to fairly recent is that change from using the word "switch" to the word "routes" within this code. "Switch" is no longer supported. It took some thought (Go Brain!) to realize that it isn't that complicated. You have "router," then "routes" then "route." The instructor also broke the code into three lines when it really could be done in just one. That line should look like: `<Route path='/pathName' element={<Register />} />` .
+
+---
+
 # 2022 09 23 | Library added
 
 Using `yarn add react-router-dom` I downloaded a library for the YT course on creating a blog app. This was used for the top menu. This required me to install yarn using the `sudo npm install --global yarn` command. Afterwards, the router took a few minutes to download.
