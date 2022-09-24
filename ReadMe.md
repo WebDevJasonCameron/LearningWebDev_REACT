@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+# 2022 09 23 | Library added
+
+Using `yarn add react-router-dom` I downloaded a library for the YT course on creating a blog app. This was used for the top menu. This required me to install yarn using the `sudo npm install --global yarn` command. Afterwards, the router took a few minutes to download.
+
 # 2022 09 19 | Continuing
 
 Completing small stuff for the topbar. I have some much more to do.
