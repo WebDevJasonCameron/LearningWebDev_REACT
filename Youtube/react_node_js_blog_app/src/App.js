@@ -11,9 +11,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
 	// VARs
-	const user = true;
+	const user = false;
 
-	// Act
+	// OUT
 	return (
 		<BrowserRouter>
 			<TopBar />
