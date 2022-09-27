@@ -3,7 +3,7 @@ import './topbar.css'
 
 export default function topbar() {
   // VARs
-  const user = true;
+  const user = false;
 
   // OUT
   return (
@@ -49,7 +49,7 @@ export default function topbar() {
                 <Link className="link" to={"/login"}>LOGIN</Link>
               </li>
               <li className="topListItem">
-                <Link className="link" to={"/register"}>Register</Link>
+                <Link className="link" to={"/register"}>REGISTER</Link>
               </li>
             </ul>
           )
