@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+# 2022 09 30 | Again
+
+Relearning some of these things. To create a react app, you first use `npx create-react-app .` This pulls the react files from the server and places them in the current directory. Once all is downloaded, you can use `npm start` to run a stock html on "http://localhost:3000".
+
 # 2022 09 24 | Resource
 
 Check out reactrouter.com for helpful code. One thing that seems to fairly recent is that change from using the word "switch" to the word "routes" within this code. "Switch" is no longer supported. It took some thought (Go Brain!) to realize that it isn't that complicated. You have "router," then "routes" then "route." The instructor also broke the code into three lines when it really could be done in just one. That line should look like: `<Route path='/pathName' element={<Register />} />` .
