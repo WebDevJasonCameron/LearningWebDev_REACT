@@ -1,5 +1,13 @@
 # REACT Initial Training
 
+# 2022 10 08 | API Setup
+
+Using MongoDB free version. There is a lot here to remember. First, you need to make sure you have node_modules, package.json, and yarn.lock inside your actual api folder. After that, you should run `npm star` within the terminal and inside the api dir. This will ask you a bunch of questions. You can answer them or just press enter all the way through. This will modify your package.json doc. From their you can change the "scripts" "test" to "start." The following line can be changed to just "node index.js." Also remember to add the index.js inside the api dir. To see what needs to be in there, check out the doc here. Finally, within the same terminal we run `yarn start`. This broke because I forgot that we ran the line below (in 2022 10 03). This lets us include a ip address while hiding it. It also lets us include pictures later!
+
+# 2022 10 03 | api
+
+To add the api libraries, we used `yarn add express mongoose dotenv multer` . This is using yarn to add express mongo db called mongoose. Then dotenv does something for us so we can later hide username and password connection to mongodb.
+
 # 2022 09 30 | Again
 
 Relearning some of these things. To create a react app, you first use `npx create-react-app .` This pulls the react files from the server and places them in the current directory. Once all is downloaded, you can use `npm start` to run a stock html on "http://localhost:3000".
