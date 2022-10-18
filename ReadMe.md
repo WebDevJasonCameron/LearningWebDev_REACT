@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+## 2022 10 17 | What is next
+
+I need to work on the rest of the tut that I started. First I want to record the YT vid that helped me through the API problem: https://www.youtube.com/watch?v=-18m0rCpr4E . The original https://www.youtube.com/watch?=OML9f6LXUUs&t=436s .
+
 ## 2022 10 16 | Figured
 
 To get this to work for the API, I need to open a terminal and type `mongod`. That should start the mongodb server. Then, I can start npm inside the api folder with `npm start`. Afterwards, I should be able to return to the actual tut I originally began with.
