@@ -1,8 +1,8 @@
 var express = require("express");
 var app = express();
 
-app.use("/lama", function (req, res) {
-	console.log("Lama");
+app.use("/overHere", (req, res) => {
+	console.log("Over here");
 });
 
 app.listen(5551, function () {
