@@ -31,3 +31,13 @@ To stop server, use `command + c`
 Run `npm install`. It looks into the folder and downloads all the packages required for this app to run. I think I should need this because this blank_project is based on a download of the react starter app, with folders copied from the tutorial. However, if you want to build an app without being online (at first), this might be a good thing to do. Only need to do this once. [BTW, the missing files are called semp files, I think]
 
 It also caused some severe vulnerabilities. `npm audit` looks like if fixed things. Not sure what though...
+
+## Note, react custom component
+
+Must start with a capital letter. So, `<ExpenseItem></ExpenseItem>` will work instead of `expenseItem`
+
+Also, there can only be one main element that wraps all other elements.
+
+## CSS Download
+
+The link to his CSS code is in GH: https://github.com/academind/react-complete-guide-code/blob/03-react-basics-working-with-components/extra-files/ExpenseItem.css
