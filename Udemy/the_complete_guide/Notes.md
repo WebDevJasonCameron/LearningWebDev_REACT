@@ -22,4 +22,6 @@ cd my-app-name
 npm-start
 ```
 
-## Next Note
+## To stop server
+
+To stop server, use `command + c`
