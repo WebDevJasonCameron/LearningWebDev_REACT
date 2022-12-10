@@ -2,5 +2,6 @@
 
 Starting a new react app
 
-> `npx create-react-app my-app` <br> > `cd my-app` <br>  
-> `npm start` <br>
+`npx create-react-app my-app`
+`cd my-app`  
+`npm start`
