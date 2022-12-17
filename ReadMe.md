@@ -1,8 +1,18 @@
 # REACT Initial Training
 
+## 2022 12 16 | Caught Up
+
+Oh, hey all! I'm back in react. It's been busy at work. I've been learning a lot about many different tech. On my free time I was doing so fun pygame stuff to help me read python better. I do a lot of that at work. Now, I've got plans on quite a few web apps that require skills in the MERN stack. Sooo, here I am back in React. I've redone the lessons I did prior to jumping into so many other things to prepare me to actually be employed. Now, lets rock the socks off of anyone who wants to steal me away from my employer with all the awesome skills I'm acquiring!!! LOL (^.^)
+
+I'm also thinking about re-naming this readme to log. I'll need to add a diff readme that shows some of the things I've been doing. That and describing what my goals are and list what tuts I've been involved with. That should be coming soon. I know that's far from actually showing great skills in programming. And yet, much like food, code represented well is pleasantly enjoyed.
+
+---
+
 ## 2022 10 17 | What is next
 
 I need to work on the rest of the tut that I started. First I want to record the YT vid that helped me through the API problem: https://www.youtube.com/watch?v=-18m0rCpr4E . The original https://www.youtube.com/watch?=OML9f6LXUUs&t=436s .
+
+---
 
 ## 2022 10 16 | Figured
 
