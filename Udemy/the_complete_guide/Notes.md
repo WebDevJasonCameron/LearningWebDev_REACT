@@ -41,3 +41,7 @@ Also, there can only be one main element that wraps all other elements.
 ## CSS Download
 
 The link to his CSS code is in GH: https://github.com/academind/react-complete-guide-code/blob/03-react-basics-working-with-components/extra-files/ExpenseItem.css
+
+## Learning styls
+
+use https://styled-components.com/
