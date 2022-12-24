@@ -10,7 +10,7 @@ const UsersList = (p) => {
 			<ul>
 				{p.users.map((user) => (
 					<li>
-						{user.name}({user.age} years old){" "}
+						{user.name} ({user.age} years old)
 					</li>
 				))}
 			</ul>
