@@ -20,6 +20,9 @@ This is a [Udemy Course](https://www.udemy.com/course/react-the-complete-guide-i
 First Course Project
 ![Expense Tracker UI](ReadmeAssets/React01TutResults.gif)
 
+Second Project, using all that has been taught so far.  
+![Username and Age](ReadmeAssets/React01TutResult_2ndProj.gif)
+
 ## Other Tutorials
 
 1. Youtube Course... More to say here...
