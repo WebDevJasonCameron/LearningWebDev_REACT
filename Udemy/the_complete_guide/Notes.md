@@ -45,3 +45,11 @@ The link to his CSS code is in GH: https://github.com/academind/react-complete-g
 ## Learning styls
 
 use https://styled-components.com/
+
+## Wrapppers
+
+These are awsome!
+
+`<> blah blah </>`
+and
+` <React.fragment> </React.fragment>`
