@@ -7,7 +7,8 @@ import ErrorModal from "../UI/ErrorModal";
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
-	useRef();
+	const nameInputRef = useRef();
+	const ageInputRef = useRef();
 
 	const [enteredUsername, setEnteredUsername] = useState("");
 	const [enteredAge, setEnteredAge] = useState("");
