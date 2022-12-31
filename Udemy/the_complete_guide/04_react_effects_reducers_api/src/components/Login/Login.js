@@ -37,15 +37,18 @@ const Login = (props) => {
 		isValid: null,
 	});
 
+	const { isValid: emailIsValid } = emailState; // obj destruction ... giving an alias
+	const { isValid: passwordIsValid } = passwordState; // the end product keeps useEffect from cont to run after true
+
 	useEffect(() => {
 		const indentifier = setTimeout(() => {
-			setFormIsValid(emailState.isValid && passwordState.isValid);
+			setFormIsValid(emailIsValid && passwordIsValid);
 		}, 500);
 
 		return () => {
 			clearTimeout(indentifier);
 		};
-	}, [emailState, passwordState]);
+	}, [emailIsValid, passwordIsValid]);
 
 	const emailChangeHandler = (event) => {
 		dispatchEmail({ type: "USER_INPUT", val: event.target.value });
