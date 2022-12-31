@@ -14,7 +14,7 @@ const emailReducer = (state, action) => {
 	return { value: "", isValid: false };
 };
 
-const passwordReducer = () => {
+const passwordReducer = (state, action) => {
 	if (action.type === "USER_INPUT") {
 		return { value: action.val, isValid: action.val.trim().length > 6 };
 	}
@@ -36,7 +36,7 @@ const Login = (props) => {
 		isValid: null,
 	});
 
-	const [passwordState, dispatchPassword] = userReducer(passwordReducer, {
+	const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
 		value: "",
 		isValid: null,
 	});
