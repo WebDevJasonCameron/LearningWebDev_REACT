@@ -6,16 +6,16 @@ const Input = (p) => {
 	return (
 		<div
 			className={`${classes.control} ${
-				emailState.isValid === false ? classes.invalid : ""
+				p.isValid === false ? classes.invalid : ""
 			}`}
 		>
-			<label htmlFor="email">E-Mail</label>
+			<label htmlFor={p.id}>{p.label}</label>
 			<input
-				type="email"
-				id="email"
-				value={emailState.value}
-				onChange={emailChangeHandler}
-				onBlur={validateEmailHandler}
+				type={p.type}
+				id={p.id}
+				value={p.value}
+				onChange={p.onChange}
+				onBlur={p.onBlur}
 			/>
 		</div>
 	);
