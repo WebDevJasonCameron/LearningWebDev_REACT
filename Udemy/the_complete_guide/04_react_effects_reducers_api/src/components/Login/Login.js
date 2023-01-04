@@ -1,10 +1,16 @@
-import React, { useState, useEffect, useReducer, useContext } from "react";
+import React, {
+	useState,
+	useEffect,
+	useReducer,
+	useContext,
+	useRef,
+} from "react";
 
 import Card from "../UI/Card/Card";
-import classes from "./Login.module.css";
 import Button from "../UI/Button/Button";
-import Input from "../UI/Input/Input";
 import AuthContext from "../../Store/auth-context";
+import Input from "../UI/Input/Input";
+import classes from "./Login.module.css";
 
 const emailReducer = (state, action) => {
 	if (action.type === "USER_INPUT") {
@@ -26,14 +32,17 @@ const passwordReducer = (state, action) => {
 	return { value: "", isValid: false };
 };
 
-const Login = () => {
+const Login = (props) => {
+	// const [enteredEmail, setEnteredEmail] = useState('');
+	// const [emailIsValid, setEmailIsValid] = useState();
+	// const [enteredPassword, setEnteredPassword] = useState('');
+	// const [passwordIsValid, setPasswordIsValid] = useState();
 	const [formIsValid, setFormIsValid] = useState(false);
 
 	const [emailState, dispatchEmail] = useReducer(emailReducer, {
 		value: "",
 		isValid: null,
 	});
-
 	const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
 		value: "",
 		isValid: null,
@@ -41,23 +50,38 @@ const Login = () => {
 
 	const authCtx = useContext(AuthContext);
 
-	const { isValid: emailIsValid } = emailState; // obj destruction ... giving an alias
-	const { isValid: passwordIsValid } = passwordState; // the end product keeps useEffect from cont to run after true
+	const emailInputRef = useRef();
+	const passwordInputRef = useRef();
 
 	useEffect(() => {
-		const indentifier = setTimeout(() => {
+		console.log("EFFECT RUNNING");
+
+		return () => {
+			console.log("EFFECT CLEANUP");
+		};
+	}, []);
+
+	const { isValid: emailIsValid } = emailState;
+	const { isValid: passwordIsValid } = passwordState;
+
+	useEffect(() => {
+		const identifier = setTimeout(() => {
+			console.log("Checking form validity!");
 			setFormIsValid(emailIsValid && passwordIsValid);
 		}, 500);
 
 		return () => {
-			clearTimeout(indentifier);
+			console.log("CLEANUP");
+			clearTimeout(identifier);
 		};
 	}, [emailIsValid, passwordIsValid]);
 
 	const emailChangeHandler = (event) => {
 		dispatchEmail({ type: "USER_INPUT", val: event.target.value });
 
-		// setFormIsValid(event.target.value.includes("@") && passwordState.isValid);
+		// setFormIsValid(
+		//   event.target.value.includes('@') && passwordState.isValid
+		// );
 	};
 
 	const passwordChangeHandler = (event) => {
@@ -79,7 +103,9 @@ const Login = () => {
 		if (formIsValid) {
 			authCtx.onLogin(emailState.value, passwordState.value);
 		} else if (!emailIsValid) {
+			emailInputRef.current.focus();
 		} else {
+			passwordInputRef.current.focus();
 		}
 	};
 
@@ -87,6 +113,7 @@ const Login = () => {
 		<Card className={classes.login}>
 			<form onSubmit={submitHandler}>
 				<Input
+					ref={emailInputRef}
 					id="email"
 					label="E-Mail"
 					type="email"
@@ -96,6 +123,7 @@ const Login = () => {
 					onBlur={validateEmailHandler}
 				/>
 				<Input
+					ref={passwordInputRef}
 					id="password"
 					label="Password"
 					type="password"
