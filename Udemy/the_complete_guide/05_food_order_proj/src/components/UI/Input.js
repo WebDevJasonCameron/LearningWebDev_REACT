@@ -6,7 +6,7 @@ const Input = React.forwardRef((p, ref) => {
 	return (
 		<div className={classes.input}>
 			<label htmlFor={p.input.id}>{p.label}</label>
-			<input ref={...p.input} />
+			<input ref={ref} {...p.input} />
 		</div>
 	);
 });
