@@ -26,7 +26,7 @@ const MealItem = (p) => {
 				<div className={classes.price}>{price}</div>
 			</div>
 			<div>
-				<MealItemForm ondAddToCart={addToCartHandler} />
+				<MealItemForm id={p.id} onAddToCart={addToCartHandler} />
 			</div>
 		</li>
 	);
