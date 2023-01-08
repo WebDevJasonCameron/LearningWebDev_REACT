@@ -23,6 +23,9 @@ First Course Project
 Second Project, using all that has been taught so far.  
 ![Username and Age](ReadmeAssets/React01TutResult_2ndProj.gif)
 
+Third Project, using useState, useRef, useContext, and useReducer. All design and logic work was created by the instructor. I followed along to produce the same application he provided.  
+![Username and Age](ReadmeAssets/React01TutResult_3rdProj.gif)
+
 ## Other Tutorials
 
 1. Youtube Course... More to say here...
