@@ -9,10 +9,10 @@ function App() {
 	const [showPar, setShowPar] = useState(false);
 	console.log("APP RUNNING");
 
-	const toggleParHandler = (e) => {
+	const toggleParHandler = useCallback((e) => {
 		e.preventDefault(); // must add this or you never see the con log
 		setShowPar((prevShowPar) => !prevShowPar);
-	};
+	}, []);
 
 	return (
 		<div className="app">
