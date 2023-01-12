@@ -10,12 +10,15 @@ function App() {
 	const [allowToggle, setAllowToggle] = useState(false);
 	console.log("APP RUNNING");
 
-	const toggleParHandler = useCallback((e) => {
-		e.preventDefault(); // must add this or you never see the con log
-		if (allowToggle) {
-			setShowPar((prevShowPar) => !prevShowPar);
-		}
-	}, []);
+	const toggleParHandler = useCallback(
+		(e) => {
+			e.preventDefault(); // must add this or you never see the con log
+			if (allowToggle) {
+				setShowPar((prevShowPar) => !prevShowPar);
+			}
+		},
+		[allowToggle]
+	);
 
 	const allowToggleHandler = (e) => {
 		e.preventDefault();
