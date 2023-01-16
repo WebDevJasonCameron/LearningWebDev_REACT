@@ -4,11 +4,6 @@ import MoviesList from "./components/MoviesList";
 import "./App.css";
 
 function App() {
-	function handleClick(e) {
-		e.preventDefault();
-		console.log("good");
-	}
-
 	const [movies, setMovies] = useState([]);
 
 	function fetchMoviesHandler() {
@@ -33,7 +28,6 @@ function App() {
 		<React.Fragment>
 			<section>
 				<button onClick={fetchMoviesHandler}>Fetch Movies</button>
-				<button onClick={handleClick}>Test Me</button>
 			</section>
 			<section>
 				<MoviesList movies={movies} />
