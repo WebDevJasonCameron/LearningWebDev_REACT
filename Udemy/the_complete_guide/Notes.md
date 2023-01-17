@@ -53,3 +53,7 @@ These are awsome!
 `<> blah blah </>`
 and
 ` <React.fragment> </React.fragment>`
+
+## Console Log
+
+I had to dive into the node modules -> react-dom -> react-dom.development.js and search for disableLog. After commenting out everything after `Object.defineProperties`, I might have gotten back my CL. I hope!
