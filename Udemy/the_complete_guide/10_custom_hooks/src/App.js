@@ -17,31 +17,16 @@ function App() {
 		setTasks(loadedTasks);
 	};
 
-	useHttp(
+	const {
+		isLoading,
+		error,
+		sendRequest: fetchTasks,
+	} = useHttp(
 		{
 			url: "https://custom-hooks-react-tut-default-rtdb.firebaseio.com/tasks.json",
 		},
 		transformTasks
 	);
-
-	const fetchTasks = async (taskText) => {
-		setIsLoading(true);
-		setError(null);
-		try {
-			const response = await fetch(
-				"https://custom-hooks-react-tut-default-rtdb.firebaseio.com/tasks.json"
-			);
-
-			if (!response.ok) {
-				throw new Error("404: Request failed!");
-			}
-
-			const data = await response.json();
-		} catch (err) {
-			setError(err.message || "Something went wrong!");
-		}
-		setIsLoading(false);
-	};
 
 	useEffect(() => {
 		fetchTasks();
