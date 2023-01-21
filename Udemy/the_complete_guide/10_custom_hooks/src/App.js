@@ -20,10 +20,12 @@ function App() {
 			setTasks(loadedTasks);
 		};
 
-		fetchTasks({
-			url: "https://custom-hooks-react-tut-default-rtdb.firebaseio.com/tasks.json",
-			transformTasks,
-		});
+		fetchTasks(
+			{
+				url: "https://custom-hooks-react-tut-default-rtdb.firebaseio.com/tasks.json",
+			},
+			transformTasks
+		);
 	}, [fetchTasks]);
 
 	const taskAddHandler = (task) => {
