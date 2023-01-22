@@ -2,29 +2,17 @@ import { useEffect, useState } from "react";
 
 const SimpleInput = (props) => {
 	const [enteredName, setEnteredName] = useState("");
-	const [enteredNameIsValid, setEnteredNameIsValid] = useState(false);
 	const [enteredNameTouched, setEnteredNameTouch] = useState(false);
 
-	useEffect(() => {
-		if (enteredNameIsValid) {
-			console.log("name Input is Valid!");
-		}
-	}, [enteredNameIsValid]);
+	const enteredNameIsValid = enteredName.trim() !== "";
+	const nameInputIsInvlid = !enteredNameIsValid && enteredNameTouched;
 
 	const nameInputChangeHandler = (e) => {
 		setEnteredName(e.target.value);
-
-		if (enteredName.trim() !== "") {
-			setEnteredNameIsValid(true);
-		}
 	};
 
 	const nameInputBlurHandler = (e) => {
 		setEnteredNameTouch(true);
-
-		if (enteredName.trim() === "") {
-			setEnteredNameIsValid(false);
-		}
 	};
 
 	const formSubmissionHandler = (e) => {
@@ -32,20 +20,16 @@ const SimpleInput = (props) => {
 
 		setEnteredNameTouch(true);
 
-		if (enteredName.trim() === "") {
-			setEnteredNameIsValid(false);
+		if (!enteredNameIsValid) {
 			return;
 		}
-
-		setEnteredNameIsValid(true);
 
 		console.log(enteredName);
 
 		// nameInputRef.current.value = "";         // NOT IDEAL, DON'T MANIPULATE THE DOM
 		setEnteredName("");
+		setEnteredNameTouch(false);
 	};
-
-	const nameInputIsInvlid = !enteredNameIsValid && enteredNameTouched;
 
 	const nameInputClasses = !nameInputIsInvlid
 		? "form-control"
@@ -67,7 +51,7 @@ const SimpleInput = (props) => {
 				)}
 			</div>
 			<div className="form-actions">
-				<button>Submit</button>
+				q<button>Submit</button>
 			</div>
 		</form>
 	);
