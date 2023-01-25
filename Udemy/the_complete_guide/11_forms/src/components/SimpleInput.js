@@ -15,10 +15,6 @@ const SimpleInput = (props) => {
 
 	let formIsValid = false;
 
-	if (enteredNameIsValid) {
-		formIsValid(true);
-	}
-
 	const nameInputChangeHandler = (e) => {
 		setEnteredName(e.target.value);
 	};
@@ -40,8 +36,8 @@ const SimpleInput = (props) => {
 
 		setEnteredNameTouch(true);
 
-		if (!enteredNameIsValid && enterEmailIsValid) {
-			return;
+		if (enteredNameIsValid && enterEmailIsValid) {
+			formIsValid = true;
 		}
 
 		console.log(enteredName);
@@ -77,7 +73,7 @@ const SimpleInput = (props) => {
 					<p className="error-text">Name must not be empty</p>
 				)}
 			</div>
-			<div className={nameInputClasses}>
+			<div className={emailInputClasses}>
 				<label htmlFor="email">Your Email</label>
 				<input
 					type="email"
