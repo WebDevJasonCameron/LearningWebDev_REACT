@@ -9,6 +9,7 @@ const SimpleInput = (props) => {
 		hasError: nameInputHasError,
 		valueChangeHandler: nameChangedHandler,
 		inputBlurHandler: nameBlurHandler,
+		reset: resetNameInput,
 	} = useInput((value) => value.trim() !== "");
 
 	const [enteredEmail, setEnteredEmail] = useState("");
@@ -19,16 +20,12 @@ const SimpleInput = (props) => {
 
 	let formIsValid = false;
 
-	const nameInputChangeHandler = (e) => {
-		setEnteredName(e.target.value);
-	};
+	if (enteredNameIsValid && enterEmailIsValid) {
+		formIsValid = true;
+	}
 
 	const emailInputChangeHandler = (e) => {
 		setEnteredEmail(e.target.value);
-	};
-
-	const nameInputBlurHandler = (e) => {
-		setEnteredNameTouch(true);
 	};
 
 	const emailInputBlurHandler = (e) => {
@@ -38,23 +35,20 @@ const SimpleInput = (props) => {
 	const formSubmissionHandler = (e) => {
 		e.preventDefault();
 
-		setEnteredNameTouch(true);
-
-		if (enteredNameIsValid && enterEmailIsValid) {
-			formIsValid = true;
+		if (!enteredNameIsValid) {
+			return;
 		}
 
 		console.log(enteredName);
 
 		// nameInputRef.current.value = "";         // NOT IDEAL, DON'T MANIPULATE THE DOM
-		setEnteredName("");
-		setEnteredNameTouch(false);
+		resetNameInput();
 
 		setEnteredEmail("");
 		setEnteredEmailTouch(false);
 	};
 
-	const nameInputClasses = !nameInputIsInvlid
+	const nameInputClasses = nameInputHasError
 		? "form-control"
 		: "form-control invalid";
 
@@ -69,11 +63,11 @@ const SimpleInput = (props) => {
 				<input
 					type="text"
 					id="name"
-					onChange={nameInputChangeHandler}
-					onBlur={nameInputBlurHandler}
+					onChange={nameChangedHandler}
+					onBlur={nameBlurHandler}
 					value={enteredName}
 				/>
-				{nameInputIsInvlid && (
+				{nameInputHasError && (
 					<p className="error-text">Name must not be empty</p>
 				)}
 			</div>
