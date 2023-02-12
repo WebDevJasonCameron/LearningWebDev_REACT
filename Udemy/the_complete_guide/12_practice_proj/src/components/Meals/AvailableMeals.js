@@ -7,12 +7,18 @@ import classes from "./AvailableMeals.module.css";
 const AvailableMeals = () => {
 	const [meals, setMeals] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
+	const [httpError, setHttpError] = useState();
 
 	useEffect(() => {
 		const fetchMeals = async () => {
 			const response = await fetch(
 				"https://custom-hooks-react-tut-default-rtdb.firebaseio.com/meals.json"
 			);
+
+			if (!response.ok) {
+				throw new Error("Something wnet wrong!");
+			}
+
 			const responseData = await response.json();
 
 			const loadedMeals = [];
@@ -29,13 +35,25 @@ const AvailableMeals = () => {
 			setIsLoading(false);
 		};
 
-		fetchMeals();
+		fetchMeals().catch((e) => {
+			//   Handling an error inside an async function
+			setIsLoading(false);
+			setHttpError(e.message);
+		});
 	}, []);
 
 	if (isLoading) {
 		return (
 			<section className={classes.MealsLoading}>
 				<p> Loading...</p>
+			</section>
+		);
+	}
+
+	if (httpError) {
+		return (
+			<section className={classes.MealsError}>
+				<p>{httpError}</p>
 			</section>
 		);
 	}
