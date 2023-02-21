@@ -16,7 +16,7 @@ const AvailableMeals = () => {
 			);
 
 			if (!response.ok) {
-				throw new Error("Something wnet wrong!");
+				throw new Error("Something went wrong!");
 			}
 
 			const responseData = await response.json();
@@ -31,21 +31,21 @@ const AvailableMeals = () => {
 					price: responseData[key].price,
 				});
 			}
+
 			setMeals(loadedMeals);
 			setIsLoading(false);
 		};
 
-		fetchMeals().catch((e) => {
-			//   Handling an error inside an async function
+		fetchMeals().catch((error) => {
 			setIsLoading(false);
-			setHttpError(e.message);
+			setHttpError(error.message);
 		});
 	}, []);
 
 	if (isLoading) {
 		return (
 			<section className={classes.MealsLoading}>
-				<p> Loading...</p>
+				<p>Loading...</p>
 			</section>
 		);
 	}
