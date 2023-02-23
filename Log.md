@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+## 2023 02 23 | ZTM Course
+
+Yes, I wanted to jump into this one because the other course seems to be missing some things (like, why cant I console log?). Let's see how this works.
+
 ## 2022 12 16 | Caught Up
 
 Oh, hey all! I'm back in react. It's been busy at work. I've been learning a lot about many different tech. On my free time I was doing so fun pygame stuff to help me read python better. I do a lot of that at work. Now, I've got plans on quite a few web apps that require skills in the MERN stack. Sooo, here I am back in React. I've redone the lessons I did prior to jumping into so many other things to prepare me to actually be employed. Now, lets rock the socks off of anyone who wants to steal me away from my employer with all the awesome skills I'm acquiring!!! LOL (^.^)
