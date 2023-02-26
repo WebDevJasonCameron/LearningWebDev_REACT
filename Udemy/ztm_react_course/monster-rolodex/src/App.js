@@ -12,6 +12,7 @@ class App extends Component {
 			company: "Smash Co.",
 		};
 	}
+
 	render() {
 		return (
 			<div className="App">
@@ -23,10 +24,16 @@ class App extends Component {
 					</p>
 					<button
 						onClick={() => {
-							this.setState({
-								name: { firstName: "Smash", lastName: "Monster" },
-							});
-							console.log(this.state);
+							this.setState(
+								() => {
+									return {
+										name: { firstName: "Smash", lastName: "Monster" },
+									};
+								},
+								() => {
+									console.log(this.state);
+								}
+							);
 						}}
 					>
 						Change Name
