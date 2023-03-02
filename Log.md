@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+## 2023 03 02 | Next Step
+
+We started this tutorial with a focus on classes. This is unlike the previous tutorial which focussed on hooks. While I understand the need to distinguish the differences between the programming instructions, I did find the class OOP aproach more familiar because I come from a acedimic approach. I wish I really understood which is more parallel to what the industry works in... I think the class approach is relational. Yeah, I am not suprised at my biosness. Fight me! LOL.
+
 ## 2023 02 23 | ZTM Course
 
 Yes, I wanted to jump into this one because the other course seems to be missing some things (like, why cant I console log?). Let's see how this works.
