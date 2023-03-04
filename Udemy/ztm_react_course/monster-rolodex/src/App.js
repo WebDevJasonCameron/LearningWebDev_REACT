@@ -11,6 +11,12 @@ const App = () => {
 
 	console.log("render");
 
+	useEffect(() => {
+		fetch("https://jsonplaceholder.typicode.com/users")
+			.then((r) => r.json())
+			.then((u) => setMonsters(u));
+	}, []);
+
 	const onSearchChange = (e) => {
 		const searchFieldString = e.target.value.toLocaleLowerCase();
 		setSearchField(searchFieldString);
@@ -19,10 +25,6 @@ const App = () => {
 	const filteredMonsters = monsters.filter((m) => {
 		return m.name.toLocaleLowerCase().includes(searchField);
 	});
-
-	fetch("https://jsonplaceholder.typicode.com/users")
-		.then((r) => r.json())
-		.then((u) => setMonsters(u));
 
 	return (
 		<div className="App">
