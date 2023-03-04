@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { useState } from "react";
 
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
@@ -6,15 +6,26 @@ import SearchBox from "./components/search-box/search-box.component";
 import "./App.css";
 
 const App = () => {
+
+	const [] = useState();			// Gives back an array of two values
+
+	const onSearchChange = (e) => {
+			const searchField = e.target.value.toLocaleLowerCase();
+			this.setState(() => {
+				return { searchField };
+			});
+		};
+	};
+
 	return (
 		<div className="App">
 			<h1 className="app-title"> Monsters Rolodex</h1>
-			{/* <SearchBox
-		className="monsters-search-box"
-		onChangeHandler={onSearchChange}
-		placeholder="search monsters"
-	/>
-	<CardList monsters={filteredMonsters} /> */}
+			<SearchBox
+				className="monsters-search-box"
+				onChangeHandler={onSearchChange}
+				placeholder="search monsters"
+			/>
+			<CardList monsters={filteredMonsters} />
 		</div>
 	);
 };
@@ -41,12 +52,7 @@ const App = () => {
 // 			);
 // 	}
 
-// 	onSearchChange = (e) => {
-// 		const searchField = e.target.value.toLocaleLowerCase();
-// 		this.setState(() => {
-// 			return { searchField };
-// 		});
-// 	};
+// 	onSearchChange
 
 // 	render() {
 // 		const { monsters, searchField } = this.state;
