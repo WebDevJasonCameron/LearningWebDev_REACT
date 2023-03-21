@@ -1,5 +1,10 @@
+// LIBs
 import { createUserDocumentFromAuth, signInWithGooglePopup } from '../../utils/firebase/firebase.utils'
 
+// COMPOs
+import SignUpForm from '../../components/directory/sign-up-form/sign-up-form.component';
+
+// COMPO
 const SignIn = () => {
 
   const logGoogleUser = async () => {
@@ -13,6 +18,7 @@ const SignIn = () => {
       <button onClick={logGoogleUser}>
         Sign in with Google Popup
       </button>
+      <SignUpForm />
     </div>
   );
 };
