@@ -3,6 +3,7 @@ import { async } from "@firebase/util";
 import { useState } from "react"
 
 // COMPs
+import Button from '../../button/button.component';
 import FormInput from "../../form-input/form-input.component";
 import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../../utils/firebase/firebase.utils";
 
@@ -100,7 +101,7 @@ const SignUpForm = () => {
           name="confirmPassword" 
           value={confirmPassword}/>
 
-        <button type="submit">Sign Up</button>
+        <Button type="submit">Sign Up</Button>
       </form>
     </div>
 
