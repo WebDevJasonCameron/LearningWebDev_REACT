@@ -54,8 +54,6 @@ const SignUpForm = () => {
       } else {
         console.log("User creation encountered an error", error)
       }
-
-
     }
   }
 
