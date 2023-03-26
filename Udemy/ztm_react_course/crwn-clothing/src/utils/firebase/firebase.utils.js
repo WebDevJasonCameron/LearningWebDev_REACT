@@ -1,21 +1,22 @@
-import { initializeApp } from "firebase/app";
+import { initializeApp } from 'firebase/app';
 import {
 	getAuth,
 	signInWithRedirect,
 	signInWithPopup,
 	GoogleAuthProvider,
 	createUserWithEmailAndPassword,
-} from "firebase/auth";
+	signInWithEmailAndPassword,
+} from 'firebase/auth';
 
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 
 const firebaseConfig = {
-	apiKey: "AIzaSyCG6Om738Hahz0HxwwsbvBy078h9h64keo",
-	authDomain: "crwn-clothing-db-smash.firebaseapp.com",
-	projectId: "crwn-clothing-db-smash",
-	storageBucket: "crwn-clothing-db-smash.appspot.com",
-	messagingSenderId: "977411928340",
-	appId: "1:977411928340:web:e8bbd6fbc0e4b147715201",
+	apiKey: 'AIzaSyCG6Om738Hahz0HxwwsbvBy078h9h64keo',
+	authDomain: 'crwn-clothing-db-smash.firebaseapp.com',
+	projectId: 'crwn-clothing-db-smash',
+	storageBucket: 'crwn-clothing-db-smash.appspot.com',
+	messagingSenderId: '977411928340',
+	appId: '1:977411928340:web:e8bbd6fbc0e4b147715201',
 };
 
 // Initialize Firebase
@@ -24,7 +25,7 @@ const firebaseApp = initializeApp(firebaseConfig);
 const googleProvider = new GoogleAuthProvider();
 
 googleProvider.setCustomParameters({
-	prompt: "select_account",
+	prompt: 'select_account',
 });
 
 export const auth = getAuth();
@@ -37,11 +38,11 @@ export const db = getFirestore();
 
 export const createUserDocumentFromAuth = async (
 	userAuth,
-	additionalInformation = { displayName: "smash" }
+	additionalInformation = { displayName: 'smash' }
 ) => {
 	if (!userAuth) return;
 
-	const userDocRef = doc(db, "users", userAuth.uid);
+	const userDocRef = doc(db, 'users', userAuth.uid);
 
 	console.log(userDocRef);
 
@@ -61,7 +62,7 @@ export const createUserDocumentFromAuth = async (
 				...additionalInformation,
 			});
 		} catch (error) {
-			console.log("error creating the user ", error);
+			console.log('error creating the user ', error);
 		}
 	}
 	return userDocRef;
@@ -71,4 +72,10 @@ export const createAuthUserWithEmailAndPassword = async (email, password) => {
 	if (!email || !password) return;
 
 	return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export const signInAuthUserWithEmailAndPassword = async (email, password) => {
+	if (!email || !password) return;
+
+	return await signInWithEmailAndPassword(auth, email, password);
 };

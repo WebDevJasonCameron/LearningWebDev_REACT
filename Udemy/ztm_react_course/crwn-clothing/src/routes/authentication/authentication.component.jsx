@@ -3,6 +3,7 @@ import { createUserDocumentFromAuth, signInWithGooglePopup } from '../../utils/f
 
 // COMPOs
 import SignUpForm from '../../components/directory/sign-up-form/sign-up-form.component';
+import SignInForm from '../../components/directory/sign-in-form/sign-in-form.component';
 
 // COMPO
 const Authentication = () => {
@@ -14,11 +15,9 @@ const Authentication = () => {
 
   return (
     <div>
-      <h1>Sign In Page</h1>
-      <button onClick={logGoogleUser}>
-        Sign in with Google Popup
-      </button>
+      <SignInForm />
       <SignUpForm />
+
     </div>
   );
 };
