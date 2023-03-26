@@ -1,12 +1,12 @@
 // LIBs
-import { async } from "@firebase/util";
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { createUserDocumentFromAuth, 
   signInWithGooglePopup, 
   signInAuthUserWithEmailAndPassword 
 } from '../../../utils/firebase/firebase.utils';
 
 // COMPs
+import { UserContext } from '../../../context/user.context';
 import Button from '../../button/button.component';
 import FormInput from "../../form-input/form-input.component";
 
@@ -26,6 +26,8 @@ const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const {email, password} = formFields;
 
+  const { setCurrentUser } = useContext(UserContext);
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields)
   }
@@ -39,8 +41,9 @@ const SignInForm = () => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(email, password);
-      console.log(response)
+      const {user} = await signInAuthUserWithEmailAndPassword(email, password);
+      setCurrentUser();
+      resetFormFields();
 
     } catch(error){
       switch(error.code) {
@@ -54,7 +57,7 @@ const SignInForm = () => {
           console.log(error)
       }
     }
-  }
+  };
 
   let handleChange = (event) => {
     const { name, value } = event.target;
@@ -94,6 +97,6 @@ const SignInForm = () => {
     </div>
 
   )
-}
+};
 
-export default SignInForm
+export default SignInForm;
