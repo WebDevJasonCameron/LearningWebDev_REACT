@@ -1,5 +1,7 @@
 // LIBs
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
+
+import { onAuthStateChangedListener } from '../utils/firebase/firebase.utils';
 
 // as the actual value you want to access
 export const UserContext = createContext({
@@ -13,6 +15,14 @@ export const UserProvider = ({ children }) => {
     currentUser, 
     setCurrentUser,
   };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChangedListener((user) => {
+      console.log(user)
+    })
+
+    return unsubscribe;
+  }, [])
 
   return( 
   <UserContext.Provider value={value}>
