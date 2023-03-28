@@ -1,12 +1,11 @@
 // LIBs
-import { useState, useContext } from "react"
+import { useState } from "react"
 import { createUserDocumentFromAuth, 
   signInWithGooglePopup, 
   signInAuthUserWithEmailAndPassword 
 } from '../../../utils/firebase/firebase.utils';
 
 // COMPs
-import { UserContext } from '../../../context/user.context';
 import Button from '../../button/button.component';
 import FormInput from "../../form-input/form-input.component";
 
@@ -24,10 +23,7 @@ const defaultFormFields = {
 const SignInForm = () => {
 
   const [formFields, setFormFields] = useState(defaultFormFields);
-  const {email, password} = formFields;
-
-  const { setCurrentUser } = useContext(UserContext);
-  
+  const {email, password} = formFields;  
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields)
