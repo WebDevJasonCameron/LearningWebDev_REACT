@@ -1,5 +1,9 @@
 # REACT Initial Training
 
+## 2023 05 30 | Time away
+
+Took some time away to do some stuff: C++, Python, and data collections. No, I'm back on the previous Udemy course. Once completed, I want to do it again with a DnD web store feel. I only hope it won't take anther year to complete.
+
 ## 2023 03 02 | Next Step
 
 We started this tutorial with a focus on classes. This is unlike the previous tutorial which focussed on hooks. While I understand the need to distinguish the differences between the programming instructions, I did find the class OOP aproach more familiar because I come from a acedimic approach. I wish I really understood which is more parallel to what the industry works in... I think the class approach is relational. Yeah, I am not suprised at my biosness. Fight me! LOL.
