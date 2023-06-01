@@ -31,10 +31,7 @@ const CheckoutItem = ({cartItem}) => {
       <span className='price'> {price} </span>
       <div className='remove-button' onClick={clearItemHandler}>&#10005;</div>
     </div>
-
   )
-
-
 }
 
 export default CheckoutItem
