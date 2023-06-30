@@ -24,5 +24,6 @@
    6. add "models" folder
    7. add ".env" file
    8. made changes to the "tailwind.config.js" file
+   9. add assets needed for the project (public/assets/etc...)
 
-5. 
+5. "rsc" and tab will give you boilerplate for a REACT jsx 
