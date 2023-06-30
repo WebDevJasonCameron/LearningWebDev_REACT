@@ -27,3 +27,5 @@
    9. add assets needed for the project (public/assets/etc...)
 
 5. "rsc" and tab will give you boilerplate for a REACT jsx 
+
+6. Stopped at 1:15:50 (Starting the Auth Part)
