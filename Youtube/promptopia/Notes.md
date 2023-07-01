@@ -69,4 +69,11 @@
    - Copy this and paste it into the ".env" file as a "MONGODB_URI" variable
      - Make sure you change the "<password>" to the pw you made earlier 
 
-9. 
+9. To understand how to build the route for user auth:
+   - http://next-auth.js.org
+   - Select "Getting Started"
+   - This page also gives you instructions on how to get the NEXTAUTH_SECRET string:
+   ```
+      openssl rand -base64 32
+   ```
+10. 
