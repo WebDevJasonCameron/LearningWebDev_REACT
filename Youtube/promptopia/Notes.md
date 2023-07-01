@@ -54,4 +54,19 @@
      - Pop up shows the client id and client secret
      - You want to copy these and place them ".env" file as environmental variables
 
-8. 
+8. To start the MongoDB database
+
+   - Go to mongodb.com/atlas
+   - sign in
+   - create cluster
+   - from the three boxes at the top, switch from "dedicated" to "share" and click "Create Cluster" at the bottom
+   - On the left menu, select "Database Access" and check to see if you know the password to your account (otherwise you can edit the pw)
+     - I found some problems with this because the account comes with a free "cluster0" 
+     - So, click this and continue by editing the pw to whatever (perhaps the same as the going in pw?)
+       - Side, side PRO note: past this variable in the ".env" file to be used in the later steps below
+   - Next select "Network Access" from the left menu. A pop-up will give you the IP Access List Entry.  You can change the IP to "0.0.0.\0 by clicking the button that says something about "Make available everywhere"
+   - Next select "database" from the left menu.  A pop-up will give you the drivers ("3. Add your connection string into your application code" area)
+   - Copy this and paste it into the ".env" file as a "MONGODB_URI" variable
+     - Make sure you change the "<password>" to the pw you made earlier 
+
+9. 
