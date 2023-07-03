@@ -76,4 +76,16 @@
    ```
       openssl rand -base64 32
    ```
-10. broke at 1:43 JSON Error
+   
+## Restarted
+
+1. The jsconfig.json has a syntax problem.  It looks like this at first...
+
+   ```
+   "@/*": ["./*"]
+   ```
+   But it needs to look like this...
+   ```
+   "@*": ["./*"]
+   ```
+2. 
