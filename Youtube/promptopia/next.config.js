@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 
 // OVERRIDE THE FOLLOWING CODE
-/*
+
 const nextConfig = {}
 
 module.exports = nextConfig
-*/
 
 // FROM WRITER'S GH
-/** @type {import('next').NextConfig} */
+/*
 const nextConfig = {
     experimental: {
         appDir: true,
@@ -27,3 +26,5 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+ */

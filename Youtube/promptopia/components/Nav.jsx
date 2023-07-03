@@ -6,9 +6,9 @@ import {useState, useEffect} from "react";
 import { signIn, signOut, useSession, getProviders } from 'next-auth/react';
 
 const Nav = () => {
-    const { data: session } = useSession()
+    const { data: session } = useSession();
 
-    const [providers, setProviders] = useState(null)
+    const [providers, setProviders] = useState(null);
     const [toggleDropdown, setToggleDropdown] = useState(false);
 
     useEffect(() => {
@@ -35,23 +35,18 @@ const Nav = () => {
             </Link>
 
             {/*Desktop Navigation*/}
+
             <div className="sm:flex hidden">
                 {session?.user ? (
                     <div className="flex gap-3 md:gap-5">
-                        <Link
-                            href="/create-prompt"
-                            className="black_btn"
-                        >
+                        <Link href="/create-prompt" className="black_btn">
                             Create Post
                         </Link>
 
-                        <button
-                            type="button"
-                            onClick={signOut}
-                            className="outline_btn"
-                        >
+                        <button type="button" onClick={signOut} className="outline_btn">
                             Sign Out
                         </button>
+
                         <Link href="/profile">
                             <Image
                                 src="/assets/images/logo.svg"
@@ -61,11 +56,11 @@ const Nav = () => {
                                 height={37}
                             />
                         </Link>
-
                     </div>
-                ):(
+                ) : (
                     <>
-                        {providers && Object.values(providers).map((provider) => (
+                        {providers &&
+                            Object.values(providers).map((provider) => (
                             <button
                                 type="button"
                                 key={provider.name}
@@ -78,6 +73,7 @@ const Nav = () => {
                     </>
                 )}
             </div>
+
             {/*Mobile Navigation*/}
             <div className="sm:hidden flex relative">
                 {session?.user ? (
@@ -119,18 +115,19 @@ const Nav = () => {
                             </div>
                         )}
                     </div>
-                ): (<>
-                    {providers && Object.values(providers).map((provider) => (
-                        <button
-                            type="button"
-                            key={provider.name}
-                            onClick={() => signIn(provider.id)}
-                            className="black_btn"
-                        >
-                            Sign In
-                        </button>
-                    ))}
-                </>
+                ) : (
+                    <>
+                        {providers && Object.values(providers).map((provider) => (
+                            <button
+                                type="button"
+                                key={provider.name}
+                                onClick={() => signIn(provider.id)}
+                                className="black_btn"
+                            >
+                                Sign In
+                            </button>
+                        ))}
+                    </>
                 )}
             </div>
         </nav>

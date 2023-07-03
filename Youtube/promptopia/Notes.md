@@ -76,4 +76,4 @@
    ```
       openssl rand -base64 32
    ```
-10. 
+10. broke at 1:43 JSON Error
