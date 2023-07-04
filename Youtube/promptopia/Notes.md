@@ -88,4 +88,4 @@
    ```
    "@*": ["./*"]
    ```
-2. 
+2. If the images are not showing up, check to see if they are in the "Public" folder!
