@@ -93,3 +93,5 @@
 3. Fixed access to sign in with the ```http://localhost:3000/api/auth/callback/google``` inside the Authorized redirect URIs (1:44:30)
 
 4. Broke on the sign in to google portion.  video time 1:45:08
+
+5. Funny, I forgot to mention... to start the server type ```npm run dev``` in the app directory
