@@ -6,8 +6,11 @@ import { useRouter } from "next/navigation";
 
 import Profile from "@components/Profile";
 import {session} from "@node_modules/next-auth/core/routes";
+import {router} from "@node_modules/next/dist/client";
 
 const MyProfile = () => {
+
+    const router = useRouter();
 
     const { data: session } = useSession();
 
@@ -24,11 +27,11 @@ const MyProfile = () => {
         if (session?.user.id) fetchPost();
     }, []);
 
-    const handleEdit = () => {
-
+    const handleEdit = (post) => {
+        router.push(`/update-prompt?id=${post._id}`)
     }
 
-    const handleDelete = async () => {
+    const handleDelete = async (post) => {
 
     }
 
