@@ -95,3 +95,19 @@
 4. Broke on the sign in to google portion.  video time 1:45:08
 
 5. Funny, I forgot to mention... to start the server type ```npm run dev``` in the app directory
+
+## Deployment
+
+1. Make this project a GH repo
+   - git init
+   - git add .
+   - git commit -m 'log'
+   - git branch -M main
+   - git remote add origin
+   - git push -u origin main
+2. In Vercel (Owner of Next.js) ... login with GH
+3. Create new project
+4. Import GH Repo (public)
+5. Root same
+6. Add Env vars
+7. Deploy (keep page capitalization consistent)

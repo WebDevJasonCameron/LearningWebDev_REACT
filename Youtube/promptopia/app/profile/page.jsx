@@ -5,8 +5,6 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from "next/navigation";
 
 import Profile from "@components/Profile";
-import {session} from "@node_modules/next-auth/core/routes";
-import {router} from "@node_modules/next/dist/client";
 
 const MyProfile = () => {
 
@@ -48,7 +46,6 @@ const MyProfile = () => {
                 console.log(error);
             }
         }
-
     }
 
     return (
