@@ -11,7 +11,7 @@
     - import alias? No
 
 2. additionally 
-   - ```npm install @headlessui/react```  <- Used for combo box and dropdown elements
+   - ```npm install @headlessui/react```  <- Used for combo box and dropdown e lements
    - ```npm install cloudinary```  <- Used for image uploads
    - ```npm install jsonwebtoken @types/jsonwebtoken```  <- Used for authentication
    - ```npm install graphql-request```  <- Used to make graph action 
