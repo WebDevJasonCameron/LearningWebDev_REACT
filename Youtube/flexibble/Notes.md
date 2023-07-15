@@ -21,4 +21,7 @@
 3. additionally, install a dev library:
    - ```npm install @grafbase/sdk --save-dev```  <- Used to speed up our workflow ith grafbase
 
-4. 
+4. To start a new Grafbase Project for this application
+   - ```npx grafbase init --config-format typescript```
+
+5. 
